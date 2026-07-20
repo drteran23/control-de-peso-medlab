@@ -1,0 +1,28 @@
+# Configuración de despliegue — Medicina Laboral Carmen (sitio estático)
+# Despliegue automático: al conectar este repositorio a Netlify,
+# cada push publica el sitio sin comando de build (HTML/CSS/JS puro).
+
+[build]
+  publish = "."
+  command = ""
+
+# Cabeceras de seguridad y caché
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Caché larga para imágenes (nombres estables)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fallback de rutas (SPA-friendly, no rompe anclas #)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

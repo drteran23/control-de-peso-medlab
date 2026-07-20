@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tirzepatida y Retatrutida · Programa médico de control de peso | Medicina Laboral Carmen</title>
+<meta name="description" content="Programa médico de control de peso con Tirzepatida y Retatrutida en Ciudad del Carmen y Villahermosa. Valoración médica, InBody y seguimiento personalizado." />
+<meta property="og:title" content="Programa de Control de peso con Tirzepatida y Retatrutida | Medicina Laboral Carmen" />
+<meta property="og:description" content="Valoración médica, InBody y plan personalizado con el péptido más adecuado para tu caso." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="./logo-mlc.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:hsl(40 33% 98%); --fg:hsl(195 45% 12%);
+  --card:hsl(0 0% 100%); --primary:hsl(188 75% 22%); --primary-glow:hsl(184 60% 38%);
+  --pfg:hsl(40 33% 98%); --muted:hsl(40 25% 95%); --muted-fg:hsl(190 24% 24%);
+  --accent:hsl(36 68% 34%); --accent-soft:hsl(38 75% 55%); --border:hsl(40 18% 88%);
+  --gradient-hero:linear-gradient(135deg,hsl(188 75% 22%) 0%,hsl(195 60% 16%) 60%,hsl(184 55% 28%) 100%);
+  --gradient-soft:linear-gradient(180deg,hsl(40 33% 98%) 0%,hsl(36 35% 95%) 100%);
+  --gradient-gold:linear-gradient(135deg,hsl(38 55% 56%) 0%,hsl(34 50% 48%) 100%);
+  --shadow-elegant:0 20px 60px -20px hsl(188 75% 22% / .18);
+  --shadow-soft:0 8px 30px -10px hsl(195 30% 30% / .12);
+  --shadow-card:0 1px 2px hsl(195 30% 20% / .04),0 8px 24px -12px hsl(195 30% 20% / .08);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Playfair Display",Georgia,serif;letter-spacing:-.01em;line-height:1.1;font-weight:600}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{margin-inline:auto;padding-inline:1.25rem;max-width:1200px}
+@media(min-width:1024px){.container{padding-inline:2rem}}
+.eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.section{padding:6rem 0}
+@media(min-width:1024px){.section{padding:8rem 0}}
+.soft{background:var(--gradient-soft)}
+.lead{color:var(--muted-fg);font-size:1.12rem}
+.muted{color:var(--muted-fg)}
+.display{font-family:"Playfair Display",serif}
+.italic{font-style:italic}
+.tprimary{color:var(--primary)}
+.taccent{color:var(--accent)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:.95rem;border-radius:999px;padding:.85rem 1.6rem;cursor:pointer;border:1px solid transparent;transition:all .35s var(--ease);min-height:3rem}
+.btn svg{width:1.1em;height:1.1em}
+.btn-hero{background:var(--primary);color:var(--pfg);box-shadow:var(--shadow-soft)}
+.btn-hero:hover{background:hsl(188 75% 18%);transform:translateY(-1px)}
+.btn-gold{background:var(--gradient-gold);color:#fff;box-shadow:0 14px 30px -14px hsl(38 55% 45% / .6)}
+.btn-gold:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.btn-outline{background:transparent;border-color:hsl(188 75% 22% / .3);color:var(--primary)}
+.btn-outline:hover{background:hsl(188 75% 22% / .06)}
+.btn-light{background:transparent;border-color:#ffffff55;color:#fff}
+.btn-light:hover{background:#ffffff14}
+.btn-wa{background:hsl(142 65% 32%);color:#fff}
+.btn-wa:hover{background:hsl(142 65% 26%)}
+.btn-lg{padding:1rem 2rem;font-size:1rem}
+.btn-block{width:100%}
+/* navbar */
+header.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:all .4s var(--ease)}
+header.nav.scrolled{background:hsl(40 33% 98% / .88);backdrop-filter:blur(10px);border-bottom:1px solid hsl(40 18% 88% / .6);box-shadow:var(--shadow-soft)}
+.navrow{display:flex;height:5rem;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand img{height:3rem;width:3rem;border-radius:999px;object-fit:cover}
+.brand .bt{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-fg);border-left:1px solid hsl(40 18% 88%);padding-left:.75rem;line-height:1.35}
+.navlinks{display:none;gap:1.25rem;align-items:center}
+.navlinks a{font-size:.9rem;color:var(--muted-fg);white-space:nowrap;transition:color .2s}
+.navlinks a:hover{color:var(--primary)}
+.navcta{display:none;align-items:center;gap:.75rem}
+.menubtn{display:inline-flex;background:none;border:none;color:var(--fg);padding:.5rem;cursor:pointer}
+.menubtn svg{width:1.6rem;height:1.6rem}
+@media(min-width:1200px){.navlinks{display:flex}.menubtn{display:none}.navcta{display:flex}}
+.mobile{display:none;background:var(--bg);border-top:1px solid var(--border)}
+.mobile.open{display:block}
+.mobile .container{padding-top:1rem;padding-bottom:1rem;display:flex;flex-direction:column;gap:.5rem}
+.mobile a{padding:.5rem 0;color:var(--fg)}
+/* hero */
+.hero{position:relative;padding:9rem 0 6rem;overflow:hidden;background:var(--gradient-soft)}
+.hero-grid{display:grid;gap:3rem;align-items:center}
+@media(min-width:1024px){.hero{padding:11rem 0 7rem}.hero-grid{grid-template-columns:7fr 5fr;gap:4rem}}
+.badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid hsl(188 75% 22% / .15);background:hsl(188 75% 22% / .05);border-radius:999px;padding:.4rem 1rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--primary)}
+.hero h1{margin-top:1.4rem;font-size:clamp(2.3rem,5vw,4.4rem);color:var(--fg);text-wrap:balance}
+.hero p.lead{margin-top:1.4rem;max-width:34rem}
+.hero-actions{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:1rem}
+.hero-phones{margin-top:2rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 2rem;font-size:.9rem}
+.hero-phones .p{display:inline-flex;align-items:center;gap:.5rem;color:var(--fg)}
+.hero-phones a{font-weight:600}.hero-phones a:hover{color:var(--primary)}
+.hero-media{position:relative}
+.hero-media .glow{position:absolute;inset:-1rem;background:var(--gradient-gold);border-radius:2rem;opacity:.15;filter:blur(30px)}
+.hero-media .frame{position:relative;border-radius:2rem;overflow:hidden;box-shadow:var(--shadow-elegant);border:1px solid hsl(40 18% 88% / .5);aspect-ratio:4/5;background:var(--card)}
+.hero-media .frame img{width:100%;height:100%;object-fit:cover}
+.pricetag{position:absolute;left:-1rem;bottom:-1.4rem;background:var(--card);border:1px solid var(--border);border-radius:1rem;box-shadow:var(--shadow-card);padding:1rem 1.3rem}
+.pricetag .l{font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted-fg);font-weight:800}
+.pricetag .v{font-family:"Playfair Display",serif;font-size:1.9rem;color:var(--primary);margin-top:.15rem}
+.pricetag .v small{font-size:.9rem;color:var(--muted-fg)}
+@media(max-width:640px){.pricetag{display:none}}
+/* headings block */
+.head{max-width:48rem}
+.head.center{margin-inline:auto;text-align:center}
+.head h2{margin-top:.75rem;font-size:clamp(2rem,4vw,3rem);color:var(--fg)}
+.head p{margin-top:1.1rem}
+/* cards */
+.grid{display:grid;gap:1.5rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:1.5rem;padding:2rem;box-shadow:var(--shadow-card);transition:box-shadow .4s var(--ease)}
+.card:hover{box-shadow:var(--shadow-elegant)}
+.tag{display:inline-flex;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;border:1px solid hsl(36 68% 34% / .3);border-radius:999px;padding:.25rem .8rem}
+.note{display:flex;gap:1rem;align-items:flex-start;border:1px solid hsl(188 75% 22% / .15);background:var(--card);border-radius:1rem;padding:1.25rem;box-shadow:var(--shadow-soft);margin-top:2.5rem}
+.note .ic{height:2.5rem;width:2.5rem;border-radius:999px;background:hsl(188 75% 22% / .1);color:var(--primary);display:grid;place-items:center;flex:none}
+.note p{font-size:.9rem;color:var(--muted-fg)}
+/* comparativa table */
+.tablewrap{margin-top:3.5rem;border:1px solid var(--border);border-radius:1.5rem;overflow:hidden;box-shadow:var(--shadow-elegant);background:var(--card)}
+.trow{display:grid;grid-template-columns:1fr 1.3fr 1.3fr}
+.thead{background:var(--primary);color:var(--pfg);font-family:"Playfair Display",serif}
+.thead>div{padding:1.1rem 1.25rem}
+.thead .k{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:hsl(40 33% 98% / .75)}
+.thead .h{font-size:1.15rem;border-left:1px solid #ffffff1a}
+.tbody .trow{border-top:1px solid var(--border)}
+.tbody .trow:nth-child(odd){background:hsl(40 33% 98% / .5)}
+.tbody .k{padding:1.1rem 1.25rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted-fg);align-self:center}
+.tbody .c{padding:1.1rem 1.25rem;font-size:.9rem;border-left:1px solid var(--border);display:flex;gap:.5rem;align-items:flex-start}
+.tbody .c.reta{background:hsl(36 68% 34% / .05)}
+.chk{width:1rem;height:1rem;flex:none;margin-top:.2rem}
+.chk.p{color:var(--primary)}.chk.a{color:var(--accent)}
+@media(max-width:760px){.trow{grid-template-columns:1fr}.thead{display:none}.tbody .trow{padding:.5rem 0}.tbody .k{padding-bottom:.2rem}.tbody .c{border-left:none}}
+/* mecanismo */
+.mec-grid{margin-top:3.5rem;display:grid;gap:2.5rem;align-items:center}
+@media(min-width:1024px){.mec-grid{grid-template-columns:1fr 1fr;gap:3.5rem}}
+.figframe{position:relative;border-radius:2rem;overflow:hidden;border:1px solid hsl(40 18% 88% / .6);box-shadow:var(--shadow-elegant);background:#fff;padding:1rem}
+.figframe img{width:100%;height:auto;border-radius:1rem}
+.feat-grid{margin-top:4rem;display:grid;gap:1.5rem}
+@media(min-width:768px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.feat-grid{grid-template-columns:repeat(4,1fr)}}
+.feat{position:relative;border-radius:1rem;background:linear-gradient(180deg,#fff,hsl(40 30% 97%));border:1px solid var(--border);padding:1.75rem;box-shadow:var(--shadow-card);transition:all .4s var(--ease)}
+.feat:hover{box-shadow:var(--shadow-elegant);transform:translateY(-4px)}
+.feat .ic{height:3.2rem;width:3.2rem;border-radius:.8rem;background:hsl(188 75% 22% / .1);color:var(--primary);display:grid;place-items:center;margin-bottom:1.2rem}
+.feat h3{font-size:1.35rem;color:var(--fg)}
+.feat p{margin-top:.6rem;color:var(--muted-fg)}
+.feat .n{position:absolute;top:1.4rem;right:1.4rem;font-size:.72rem;color:hsl(190 24% 24% / .55);font-family:ui-monospace,monospace}
+/* para quien */
+.pq-grid{display:grid;gap:3.5rem;align-items:center}
+@media(min-width:1024px){.pq-grid{grid-template-columns:1fr 1fr}}
+.pq-img{position:relative}
+.pq-img img{border-radius:2rem;width:100%;height:480px;object-fit:cover;box-shadow:var(--shadow-elegant);border:1px solid hsl(40 18% 88% / .5)}
+.checklist{margin-top:2rem;list-style:none;display:flex;flex-direction:column;gap:1rem}
+.checklist li{display:flex;gap:1rem;align-items:flex-start}
+.checklist .b{margin-top:.15rem;height:1.5rem;width:1.5rem;border-radius:999px;background:hsl(188 75% 22% / .1);display:grid;place-items:center;flex:none}
+.checklist .b svg{width:.85rem;height:.85rem;color:var(--primary)}
+.checklist p{color:var(--fg)}
+.quotebar{margin-top:2rem;font-size:.9rem;color:var(--muted-fg);font-style:italic;border-left:2px solid var(--accent);padding-left:1rem}
+/* beneficios (dark) */
+.dark{background:var(--primary);color:var(--pfg);position:relative;overflow:hidden}
+.ben-grid{display:grid;gap:3rem;align-items:center}
+@media(min-width:1024px){.ben-grid{grid-template-columns:7fr 5fr}}
+.ben-grid h2{font-size:clamp(2rem,4vw,3rem)}
+.ben-grid .lead{color:hsl(40 33% 98% / .9)}
+.ben-img{border-radius:2rem;overflow:hidden;border:1px solid #ffffff26;box-shadow:var(--shadow-elegant);aspect-ratio:4/3}
+.ben-img img{width:100%;height:100%;object-fit:cover}
+.ben-cards{margin-top:4rem;display:grid;gap:1px;background:#ffffff1a;border-radius:1rem;overflow:hidden;border:1px solid #ffffff1a}
+@media(min-width:768px){.ben-cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.ben-cards{grid-template-columns:repeat(3,1fr)}}
+.ben-cards .c{background:var(--primary);padding:2rem;transition:background .3s}
+.ben-cards .c:hover{background:#ffffff0d}
+.ben-cards .c svg{width:2rem;height:2rem;color:var(--accent-soft)}
+.ben-cards .c h3{margin-top:1.2rem;font-size:1.35rem}
+.ben-cards .c p{margin-top:.5rem;color:hsl(40 33% 98% / .85)}
+/* precios */
+.price-grid{margin-top:4rem;display:grid;gap:1.5rem;max-width:72rem;margin-inline:auto;align-items:stretch}
+@media(min-width:1024px){.price-grid{grid-template-columns:repeat(3,1fr)}}
+.plan{background:var(--card);border:1px solid var(--border);border-radius:1.5rem;padding:2rem;box-shadow:var(--shadow-card);display:flex;flex-direction:column}
+.plan.hl{background:var(--primary);color:var(--pfg);box-shadow:var(--shadow-elegant);position:relative;overflow:hidden}
+@media(min-width:1024px){.plan.hl{transform:scale(1.03)}}
+.plan .k{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--muted-fg)}
+.plan.hl .k{color:hsl(40 33% 98% / .7)}
+.plan h3{margin-top:.75rem;font-size:1.7rem;color:var(--fg)}
+.plan.hl h3{color:#fff}
+.plan .sub{font-size:.85rem;color:var(--muted-fg);margin-top:.25rem}
+.plan.hl .sub{color:hsl(40 33% 98% / .8)}
+.plan .price{margin-top:1.4rem;font-family:"Playfair Display",serif;font-size:3.4rem;color:var(--primary);line-height:1}
+.plan.hl .price{color:#fff}
+.plan .price small{font-size:1.3rem;color:var(--muted-fg);margin-left:.25rem}
+.plan.hl .price small{color:hsl(40 33% 98% / .7)}
+.plan .pnote{margin-top:.6rem;font-size:.76rem;font-style:italic;color:var(--muted-fg)}
+.plan.hl .pnote{color:hsl(40 33% 98% / .8)}
+.plan ul{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem;flex:1}
+.plan li{display:flex;gap:.75rem;align-items:flex-start;color:hsl(195 45% 12% / .85)}
+.plan.hl li{color:#fff}
+.plan li svg{width:1.15rem;height:1.15rem;flex:none;margin-top:.15rem;color:var(--primary)}
+.plan.hl li svg{color:var(--accent-soft)}
+.plan .badge-hl{position:absolute;top:1.3rem;right:1.3rem;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;background:var(--gradient-gold);color:#fff;padding:.3rem .7rem;border-radius:999px}
+.plan .btn{margin-top:2rem}
+.price-foot{margin-top:3.5rem;text-align:center}
+.price-foot .chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--muted-fg)}
+/* proceso */
+.steps{margin-top:4rem;display:grid;gap:2rem;position:relative}
+@media(min-width:768px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{position:relative;text-align:center}
+.step .num{height:6rem;width:6rem;border-radius:999px;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow-card);display:grid;place-items:center;margin:0 auto;font-family:"Playfair Display",serif;font-size:1.9rem;color:var(--primary)}
+.step h3{margin-top:1.5rem;font-size:1.25rem;color:var(--fg)}
+.step p{margin-top:.75rem;color:var(--muted-fg)}
+/* testimonios */
+.banner{margin-top:3rem;border-radius:2rem;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-elegant);aspect-ratio:16/6;background:var(--card)}
+.banner img{width:100%;height:100%;object-fit:cover}
+.tgrid{margin-top:4rem;display:grid;gap:1.5rem}
+@media(min-width:768px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+.tcard{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:2rem;box-shadow:var(--shadow-card)}
+.tcard svg{width:2rem;height:2rem;color:var(--accent)}
+.tcard .q{margin-top:1.25rem;color:hsl(195 45% 12% / .9);font-style:italic}
+.tcard .who{margin-top:1.75rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+.tcard .who .n{font-family:"Playfair Display",serif;font-size:1.1rem}
+.tcard .who .r{font-size:.85rem;color:var(--muted-fg)}
+/* faq */
+.faq{max-width:56rem;margin-inline:auto;margin-top:3.5rem;display:flex;flex-direction:column;gap:.75rem}
+.qa{background:var(--card);border:1px solid var(--border);border-radius:1rem;box-shadow:var(--shadow-card);overflow:hidden}
+.qa button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:1.25rem 1.5rem;font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--fg);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.qa button .arm{transition:transform .3s;flex:none}
+.qa.open button .arm{transform:rotate(180deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+.qa .a p{padding:0 1.5rem 1.25rem;color:var(--muted-fg)}
+/* contacto */
+.ct-grid{display:grid;gap:3rem}
+@media(min-width:1024px){.ct-grid{grid-template-columns:5fr 7fr}}
+.info{display:flex;flex-direction:column;gap:1.5rem;margin-top:2.5rem}
+.info .row{display:flex;gap:1rem;align-items:flex-start}
+.info .ic{height:2.75rem;width:2.75rem;border-radius:999px;background:hsl(188 75% 22% / .1);color:var(--primary);display:grid;place-items:center;flex:none}
+.info .k{font-size:.68rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted-fg)}
+.info .big{font-family:"Playfair Display",serif;font-size:1.2rem;display:flex;flex-direction:column}
+.info a:hover{color:var(--primary)}
+.form{background:var(--card);border:1px solid var(--border);border-radius:1.5rem;padding:2rem;box-shadow:var(--shadow-elegant);display:flex;flex-direction:column;gap:1.25rem}
+.frow{display:grid;gap:1.25rem}
+@media(min-width:640px){.frow{grid-template-columns:1fr 1fr}}
+.field label{font-size:.85rem;font-weight:500;color:var(--fg)}
+.field input,.field textarea{width:100%;margin-top:.5rem;padding:.8rem 1rem;border:1px solid var(--border);border-radius:.6rem;background:var(--card);font:inherit;color:var(--fg);min-height:3rem}
+.field textarea{min-height:6rem;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px hsl(188 75% 22% / .12)}
+.finelabel{font-size:.75rem;color:var(--muted-fg);text-align:center}
+/* cta final */
+.ctabox{position:relative;overflow:hidden;border-radius:2rem;background:var(--gradient-hero);color:var(--pfg);padding:2.5rem;box-shadow:var(--shadow-elegant)}
+@media(min-width:1024px){.ctabox{padding:4rem}}
+.ctabox .in{position:relative;display:grid;gap:2.5rem;align-items:center}
+@media(min-width:1024px){.ctabox .in{grid-template-columns:2fr 1fr}}
+.ctabox h2{font-size:clamp(2rem,4vw,3.4rem);text-wrap:balance}
+.ctabox p{margin-top:1.2rem;color:hsl(40 33% 98% / .82);max-width:34rem}
+.ctabox .btns{display:flex;flex-direction:column;gap:.75rem}
+/* footer */
+footer{background:var(--primary);color:var(--pfg)}
+.foot{padding:4rem 0;display:grid;gap:2.5rem}
+@media(min-width:1024px){.foot{grid-template-columns:4fr 3fr 5fr}}
+.foot .brandf{display:flex;align-items:center;gap:1rem}
+.foot .brandf .wrap{background:var(--pfg);border-radius:999px;padding:.35rem;box-shadow:var(--shadow-soft)}
+.foot .brandf img{height:3.4rem;width:3.4rem;border-radius:999px;object-fit:cover}
+.foot .brandf p{font-family:"Playfair Display",serif;font-size:1.2rem;line-height:1.25}
+.foot .desc{margin-top:1.25rem;color:hsl(40 33% 98% / .7);max-width:28rem}
+.foot .kf{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent-soft)}
+.foot ul{list-style:none;margin-top:1.25rem;display:flex;flex-direction:column;gap:1rem;font-size:.9rem}
+.foot .locs{display:grid;gap:1.25rem}
+@media(min-width:640px){.foot .locs{grid-template-columns:1fr 1fr}}
+.foot .row{display:flex;gap:.75rem;align-items:flex-start}
+.foot .row svg{width:1rem;height:1rem;margin-top:.2rem;color:var(--accent-soft);flex:none}
+.foot a:hover{text-decoration:underline}
+.foot .sub{color:hsl(40 33% 98% / .8)}
+.footbar{border-top:1px solid #ffffff1a}
+.footbar .in{padding:1.5rem 0;display:flex;flex-direction:column;gap:1rem;font-size:.75rem;color:hsl(40 33% 98% / .6)}
+@media(min-width:768px){.footbar .in{flex-direction:row;align-items:center;justify-content:space-between}}
+.footbar .in .r{font-style:italic;max-width:36rem}
+@media(min-width:768px){.footbar .in .r{text-align:right}}
+/* whatsapp float */
+.wafloat{position:fixed;right:1rem;bottom:1rem;z-index:60}
+@media(min-width:640px){.wafloat{right:1.5rem;bottom:1.5rem}}
+.wafloat a{position:relative;display:inline-flex;align-items:center;gap:.5rem;background:hsl(142 65% 32%);color:#fff;border-radius:999px;padding:.8rem 1.1rem;box-shadow:var(--shadow-elegant);min-height:44px;font-weight:600;font-size:.9rem}
+.wafloat a:hover{background:hsl(142 65% 26%)}
+.wafloat .ping{position:absolute;inset:0;border-radius:999px;background:hsl(142 70% 45%);opacity:.5;animation:ping 2s cubic-bezier(0,0,.2,1) infinite;z-index:-1}
+@keyframes ping{75%,100%{transform:scale(1.5);opacity:0}}
+@media(max-width:480px){.wafloat .lbl{display:none}}
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}*{animation-duration:.001ms!important;transition-duration:.001ms!important}.wafloat .ping{animation:none}}
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="container navrow">
+    <a href="#top" class="brand">
+      <img src="./logo-mlc.jpg" alt="Medicina Laboral Carmen" />
+      <span class="bt">PEPTIDOS PARA CONTROL DE PESO:<br>TIRZEPATIDA · RETATRUTIDA</span>
+    </a>
+    <nav class="navlinks">
+      <a href="#que-es">¿Qué son?</a>
+      <a href="#comparativa">Comparativa</a>
+      <a href="#mecanismo">Mecanismo</a>
+      <a href="#para-quien">Candidatos</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#precios">Inversión</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="navcta">
+      <a class="btn btn-hero" style="min-height:2.5rem;padding:.6rem 1.2rem" href="#contacto">Agendar Consulta Inicial</a>
+    </div>
+    <button class="menubtn" id="menubtn" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div class="mobile" id="mobile">
+    <div class="container">
+      <a href="#que-es">¿Qué son?</a>
+      <a href="#comparativa">Comparativa</a>
+      <a href="#mecanismo">Mecanismo</a>
+      <a href="#para-quien">Candidatos</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#precios">Inversión</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn-hero" style="margin-top:.5rem" href="#contacto">Agendar Consulta Inicial</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="badge">🛡 Programa médico especializado · Cd. del Carmen · Villahermosa</span>
+      <h1>Programa de Control de peso especializado con <span class="tprimary italic">TIRZEPATIDA</span> y <span class="tprimary italic">RETATRUTIDA</span> bajo seguimiento médico.</h1>
+      <p class="lead">En Medicina Laboral Carmen te acompañamos con una valoración médica, InBody de última generación y un plan personalizado con el péptido más adecuado para tu caso. Descubre las diferencias, beneficios y precios de cada uno.</p>
+      <div class="hero-actions">
+        <a class="btn btn-hero btn-lg" href="#contacto">Agendar Consulta Inicial →</a>
+        <a class="btn btn-outline btn-lg" data-wa="Hola, me interesa el programa médico de control de peso." target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+      <div class="hero-phones">
+        <span class="p">📞 <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529383834002" target="_blank" rel="noopener">+52 938 383 4002</a>, <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529381282453" target="_blank" rel="noopener">+52 938 128 2453</a></span>
+        <span class="muted">Dr. Fernando Terán · Dra. Geraldine Cabrera</span>
+      </div>
+    </div>
+    <div class="reveal hero-media">
+      <div class="glow"></div>
+      <div class="frame"><img src="./hero-peptido.jpg" alt="Vial y pluma de péptido para control de peso" /></div>
+      <div class="pricetag">
+        <div class="l">Consulta inicial + InBody</div>
+        <div class="v">$1,000 <small>MXN</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUE ES -->
+<section id="que-es" class="section">
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow">01 — Conocer</span>
+      <h2>¿Qué son la <span class="tprimary">Tirzepatida</span> y la <span class="tprimary">Retatrutida</span>?</h2>
+      <p class="lead">Dos péptidos empleados dentro de un abordaje médico integral orientado al control de peso y la salud metabólica. Cada uno posee un mecanismo de acción distinto, y su elección se basa en la valoración clínica individual de cada paciente.</p>
+    </div>
+    <div class="grid reveal" style="margin-top:3.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+      <article class="card">
+        <span class="tag">Agonista dual GIP + GLP-1</span>
+        <h3 class="display tprimary" style="margin-top:1rem;font-size:1.9rem">Tirzepatida</h3>
+        <p class="muted" style="margin-top:1rem">Péptido de acción dual que actúa simultáneamente sobre los receptores GIP y GLP-1. Cuenta con aprobación y un amplio respaldo de evidencia clínica; se administra mediante inyección semanal y ha demostrado resultados sólidos en el control de peso y la salud metabólica.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Agonista triple GIP + GLP-1 + Glucagón</span>
+        <h3 class="display tprimary" style="margin-top:1rem;font-size:1.9rem">Retatrutida</h3>
+        <p class="muted" style="margin-top:1rem">Péptido de nueva generación con acción triple sobre los receptores GIP, GLP-1 y glucagón. Potencia el gasto energético y la reducción del apetito, mostrando resultados prometedores en la pérdida de peso dentro de un programa médico supervisado.</p>
+      </article>
+    </div>
+    <div class="note reveal">
+      <div class="ic">✨</div>
+      <p><strong style="color:var(--fg)">Importante:</strong> el uso de ambos péptidos requiere valoración médica previa. La elección del fármaco depende de tu perfil clínico y objetivos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVA -->
+<section id="comparativa" class="section soft">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">02 — Diferencias</span>
+      <h2><span class="tprimary italic">Tirzepatida</span> vs <span class="taccent italic">Retatrutida</span></h2>
+      <p class="lead">Ambos péptidos comparten un objetivo, pero difieren en mecanismo, potencia esperada e inversión. Esta comparativa te ayuda a entender cuál puede ajustarse mejor a tu caso.</p>
+    </div>
+    <div class="tablewrap reveal">
+      <div class="trow thead">
+        <div class="k">Característica</div><div class="h">Tirzepatida</div><div class="h" style="background:#ffffff0d">Retatrutida</div>
+      </div>
+      <div class="tbody" id="comp-body"></div>
+    </div>
+    <p class="muted reveal" style="margin-top:1.5rem;font-size:.8rem;font-style:italic;text-align:center;max-width:44rem;margin-inline:auto">Información con fines educativos. La elección terapéutica corresponde siempre al criterio médico tras la valoración individual.</p>
+  </div>
+</section>
+
+<!-- MECANISMO -->
+<section id="mecanismo" class="section">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">03 — Comprender</span>
+      <h2>Mecanismo de acción</h2>
+      <p class="lead">Cómo actúan estos péptidos dentro de un programa médico integral de control de peso.</p>
+    </div>
+    <div class="mec-grid">
+      <div class="reveal figframe">
+        <img src="./mecanismo-incretinas.png" alt="Infografía: efectos de GLP-1, GIP y glucagón sobre intestino, cerebro, músculo, páncreas, hígado, tejido adiposo, corazón y termogénesis" width="1920" height="1348" loading="lazy" decoding="async" />
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Visión integral</span>
+        <h3 class="display" style="margin-top:.75rem;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--fg)">De acción dual a acción triple sobre los receptores incretínicos</h3>
+        <p class="muted" style="margin-top:1.25rem">La <strong style="color:var(--fg)">Tirzepatida</strong> activa simultáneamente los receptores GIP y GLP-1, favoreciendo la saciedad y el control de peso. La <strong style="color:var(--fg)">Retatrutida</strong> suma un tercer eje, el receptor de glucagón, que potencia el gasto energético y la quema de grasa. Esta diferencia se traduce en perfiles clínicos distintos que evaluamos caso por caso para diseñar el abordaje más adecuado para cada paciente.</p>
+        <p class="muted" style="margin-top:1rem;font-size:.8rem;font-style:italic">Imagen ilustrativa con fines educativos. Indicación, dosis y seguimiento por personal médico calificado.</p>
+      </div>
+    </div>
+    <div class="feat-grid" id="mec-feats"></div>
+  </div>
+</section>
+
+<!-- PARA QUIEN -->
+<section id="para-quien" class="section soft">
+  <div class="container pq-grid">
+    <div class="reveal pq-img" style="order:2">
+      <img src="./program-doctor.jpg" alt="Médico realizando valoración con InBody" loading="lazy" />
+    </div>
+    <div class="reveal" style="order:1">
+      <span class="eyebrow">04 — Candidatos</span>
+      <h2 class="display" style="margin-top:.75rem;font-size:clamp(2rem,4vw,3rem);color:var(--fg)">¿Para quién puede ser una opción?</h2>
+      <p class="lead" style="margin-top:1.1rem">La idoneidad para Tirzepatida o Retatrutida se confirma siempre tras una valoración médica previa. El médico determina cuál se ajusta mejor a tu caso.</p>
+      <ul class="checklist" id="cand-list"></ul>
+      <p class="quotebar">La aplicación del programa requiere siempre valoración médica previa para garantizar la seguridad y pertinencia para cada paciente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios" class="section dark">
+  <div class="container">
+    <div class="ben-grid">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--accent-soft)">05 — Diferenciales</span>
+        <h2 style="margin-top:.75rem">Una experiencia médica completa e integral, no solo un tratamiento.</h2>
+        <p class="lead" style="margin-top:1.25rem">Cada elemento del programa está diseñado para acompañarte de forma profesional, segura y estructurada — sea con Tirzepatida o con Retatrutida.</p>
+      </div>
+      <div class="reveal ben-img">
+        <img src="./consulta-inbody.jpg" alt="Consulta médica con análisis de composición corporal InBody" loading="lazy" decoding="async" />
+      </div>
+    </div>
+    <div class="ben-cards" id="ben-cards"></div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios" class="section">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">06 — Inversión</span>
+      <h2>Elige la opción que mejor se ajusta a ti.</h2>
+      <p class="lead">Consulta inicial única de <strong style="color:var(--fg)">$1,000 MXN</strong> (incluye InBody). En consultas subsecuentes solo se cobra la dosis aplicada del péptido elegido.</p>
+    </div>
+    <div class="price-grid">
+      <article class="plan reveal">
+        <p class="k">Inicio del programa</p>
+        <h3>Consulta médica inicial (primera vez, único pago).</h3>
+        <p class="price">$1,000<small>MXN</small></p>
+        <ul>
+          <li>✔ Valoración médica completa</li>
+          <li>✔ Historia clínica orientada al control de peso</li>
+          <li>✔ Recomendación entre Tirzepatida o Retatrutida</li>
+          <li>✔ Análisis InBody inicial</li>
+        </ul>
+        <a class="btn btn-outline btn-block" data-wa="Hola, quiero agendar mi consulta inicial ($1,000 MXN)." target="_blank" rel="noopener">Agendar consulta inicial →</a>
+      </article>
+      <article class="plan hl reveal">
+        <span class="badge-hl">Más solicitado</span>
+        <p class="k">Agonista dual</p>
+        <h3>Tirzepatida</h3>
+        <p class="sub">Dosis semanal + InBody</p>
+        <p class="price">$950<small>MXN</small></p>
+        <p class="pnote">Aplicación de dosis 2.5 mg bajo supervisión médica. Si la dosis requerida aumenta, el precio puede variar.</p>
+        <ul>
+          <li>✔ Análisis InBody de composición corporal</li>
+          <li>✔ Aplicación de dosis bajo supervisión médica</li>
+          <li>✔ Consultas subsecuentes sin costo</li>
+          <li>✔ InBody subsecuente sin costo</li>
+          <li>✔ En subsecuentes solo se cobra la dosis aplicada</li>
+        </ul>
+        <a class="btn btn-gold btn-block" data-wa="Hola, quiero información sobre el programa con Tirzepatida ($950 MXN por dosis semanal)." target="_blank" rel="noopener">💬 Solicitar por WhatsApp</a>
+      </article>
+      <article class="plan reveal">
+        <p class="k">Agonista triple</p>
+        <h3>Retatrutida</h3>
+        <p class="sub">Dosis semanal + InBody</p>
+        <p class="price">$1,150<small>MXN</small></p>
+        <p class="pnote">Aplicación de dosis semanal bajo supervisión médica dentro del programa integral.</p>
+        <ul>
+          <li>✔ Análisis InBody de composición corporal</li>
+          <li>✔ Aplicación de dosis bajo supervisión médica</li>
+          <li>✔ Consultas subsecuentes sin costo</li>
+          <li>✔ InBody subsecuente sin costo</li>
+          <li>✔ En subsecuentes solo se cobra la dosis aplicada</li>
+        </ul>
+        <a class="btn btn-outline btn-block" data-wa="Hola, quiero información sobre el programa con Retatrutida ($1,150 MXN por dosis semanal)." target="_blank" rel="noopener">💬 Solicitar por WhatsApp</a>
+      </article>
+    </div>
+    <div class="price-foot reveal">
+      <span class="chip">✨ Consultas subsecuentes e InBody de seguimiento sin costo.</span>
+      <div style="margin-top:1.5rem">
+        <a class="btn btn-hero btn-lg" style="padding-inline:2.5rem" data-wa="Hola, me interesa el programa. ¿Pueden ayudarme a decidir entre Tirzepatida y Retatrutida?" target="_blank" rel="noopener">💬 Hablar ahora por WhatsApp</a>
+      </div>
+      <p class="muted" style="margin-top:1.5rem;font-size:.85rem">Precios en pesos mexicanos. La aplicación se realiza siempre bajo valoración y supervisión médica con el Dr. Fernando Terán y la Dra. Geraldine Cabrera.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="section soft">
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow">07 — Programa</span>
+      <h2>Cómo funciona el programa</h2>
+      <p class="lead">Cuatro etapas claras, diseñadas para acompañarte con orden y profesionalismo.</p>
+    </div>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">08 — Confianza</span>
+      <h2>Pacientes que avanzan con orden y acompañamiento.</h2>
+    </div>
+    <div class="banner reveal"><img src="./estilo-vida.jpg" alt="Paciente activa y saludable tras el programa de control de peso" loading="lazy" decoding="async" /></div>
+    <div class="tgrid" id="testis"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section soft">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">09 — Preguntas frecuentes</span>
+      <h2>Resolvemos tus dudas</h2>
+    </div>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section">
+  <div class="container ct-grid">
+    <div class="reveal">
+      <span class="eyebrow">10 — Contacto</span>
+      <h2 class="display" style="margin-top:.75rem;font-size:clamp(2rem,4vw,3rem);color:var(--fg)">Solicita tu valoración</h2>
+      <p class="lead" style="margin-top:1.1rem">Déjanos tus datos y te contactamos por WhatsApp para agendar tu cita con el Dr. Fernando Terán y la Dra. Geraldine Cabrera.</p>
+      <div class="info">
+        <div class="row">
+          <div class="ic">📞</div>
+          <div>
+            <p class="k">Teléfono / WhatsApp</p>
+            <div class="big">
+              <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529383834002" target="_blank" rel="noopener">+52 938 383 4002</a>
+              <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529381282453" target="_blank" rel="noopener">+52 938 128 2453</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="ic">📍</div>
+          <div>
+            <p class="k">Ciudad del Carmen, Campeche</p>
+            <p style="color:var(--fg);font-weight:500">Oficinas Medicina Laboral Carmen SA de CV</p>
+            <p class="muted" style="font-size:.9rem;margin-top:.2rem">Calle 55, número 93, Clínica Cesat.<br>Ciudad del Carmen, Campeche.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="ic">📍</div>
+          <div>
+            <p class="k">Villahermosa, Tabasco</p>
+            <p style="color:var(--fg);font-weight:500">Consultorio Villahermosa</p>
+            <p class="muted" style="font-size:.9rem;margin-top:.2rem">Av. Paseo Tabasco, Plaza Ambientación, local 02.<br>Villahermosa, Tabasco.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="ic">🕒</div>
+          <div>
+            <p class="k">Horarios de atención</p>
+            <p style="font-size:.9rem"><span style="font-weight:600">Lunes a viernes:</span> <span class="muted">9:00 a.m. – 1:30 p.m. y 4:00 p.m. – 5:30 p.m.</span></p>
+            <p style="font-size:.9rem"><span style="font-weight:600">Sábado y domingo:</span> <span class="muted">8:00 a.m. – 1:30 p.m.</span></p>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-wa" style="margin-top:2.5rem" data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener">💬 Escribir directo por WhatsApp</a>
+    </div>
+    <div class="reveal">
+      <form class="form" id="contactForm" novalidate>
+        <div class="frow">
+          <div class="field"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" placeholder="Tu nombre" required /></div>
+          <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" inputmode="tel" placeholder="938 000 0000" required /></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" placeholder="tu@correo.com" required /></div>
+          <div class="field"><label for="interes">Me interesa</label><input id="interes" name="interes" placeholder="Tirzepatida, Retatrutida o consulta" required /></div>
+        </div>
+        <div class="field"><label for="mensaje">Mensaje (opcional)</label><textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente lo que necesitas"></textarea></div>
+        <button type="submit" class="btn btn-hero btn-lg btn-block">Solicitar información ó Agendar una cita →</button>
+        <p class="finelabel">Al enviar, aceptas que te contactemos por los medios proporcionados.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="ctabox reveal">
+      <div class="in">
+        <div>
+          <span class="eyebrow" style="color:var(--accent-soft)">Da el primer paso</span>
+          <h2 style="margin-top:.75rem">Tu programa médico de control de peso comienza con una valoración profesional.</h2>
+          <p>Agenda tu cita con cualquiera de nuestros médicos especializados en péptidos para control de peso y descubre si Tirzepatida o Retatrutida es la mejor opción para ti.</p>
+        </div>
+        <div class="btns">
+          <a class="btn btn-gold btn-block" data-wa="Hola, quiero agendar mi valoración para el programa médico de control de peso." target="_blank" rel="noopener">💬 Agendar cita por WhatsApp</a>
+          <a class="btn btn-light btn-block" data-wa="Hola, quiero agendar mi valoración." data-phone="529381282453" target="_blank" rel="noopener">WhatsApp +52 938 128 2453 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot">
+    <div>
+      <div class="brandf">
+        <div class="wrap"><img src="./logo-mlc.jpg" alt="Medicina Laboral Carmen" /></div>
+        <p>MEDICINA LABORAL CARMEN SA DE CV</p>
+      </div>
+      <p class="desc">Programa médico integral de control de peso con Tirzepatida y Retatrutida, acompañamiento profesional, monitoreo con InBody y seguimiento personalizado.</p>
+    </div>
+    <div>
+      <p class="kf">Contacto</p>
+      <ul>
+        <li class="row">📞 <div><a data-wa="Hola, me interesa el programa médico." data-phone="529383834002" target="_blank" rel="noopener">+52 938 383 4002</a><br><a data-wa="Hola, me interesa el programa médico." data-phone="529381282453" target="_blank" rel="noopener">+52 938 128 2453</a></div></li>
+        <li class="row">🕒 <div class="sub"><span style="color:var(--pfg);font-weight:600">Lunes a viernes:</span> 9:00 a.m. – 1:30 p.m. y 4:00 p.m. – 5:30 p.m.<br><span style="color:var(--pfg);font-weight:600">Sábado y domingo:</span> 8:00 a.m. – 1:30 p.m.</div></li>
+      </ul>
+    </div>
+    <div>
+      <p class="kf">Ubicaciones</p>
+      <div class="locs" style="margin-top:1.25rem">
+        <div class="row">📍 <div><p style="color:var(--pfg);font-weight:600">Ciudad del Carmen, Campeche</p><p class="sub" style="color:hsl(40 33% 98% / .7)">Calle 55, número 93, Clínica Cesat.<br>Ciudad del Carmen, Campeche.</p></div></div>
+        <div class="row">📍 <div><p style="color:var(--pfg);font-weight:600">Villahermosa, Tabasco</p><p class="sub" style="color:hsl(40 33% 98% / .7)">Av. Paseo Tabasco, Plaza Ambientación, local 02.<br>Villahermosa, Tabasco.</p></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footbar">
+    <div class="container in">
+      <p id="copy">© Medicina Laboral Carmen SA de CV. Todos los derechos reservados.</p>
+      <p class="r">La información de esta página es informativa y no sustituye una valoración médica profesional.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="wafloat">
+  <a data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener"><span class="ping"></span>💬 <span class="lbl">Agendar cita</span></a>
+</div>
+
+<script>
+// WhatsApp links
+function wa(phone,msg){return "https://api.whatsapp.com/send?phone="+phone+"&text="+encodeURIComponent(msg);}
+document.querySelectorAll("[data-wa]").forEach(function(el){
+  el.setAttribute("href", wa(el.dataset.phone||"529383834002", el.dataset.wa));
+});
+// Navbar scroll + mobile menu
+var nav=document.getElementById("nav"),mob=document.getElementById("mobile");
+function onScroll(){nav.classList.toggle("scrolled",window.scrollY>24);}
+onScroll();window.addEventListener("scroll",onScroll,{passive:true});
+document.getElementById("menubtn").addEventListener("click",function(){mob.classList.toggle("open");});
+mob.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){mob.classList.remove("open");});});
+// Comparativa rows
+var comp=[
+ ["Clase","Agonista dual GIP / GLP-1","Agonista triple GIP / GLP-1 / Glucagón"],
+ ["Aplicación","Subcutánea semanal","Subcutánea semanal"],
+ ["Mecanismo distintivo","Doble receptor incretínico: saciedad + control glucémico","Triple acción: suma efecto sobre gasto energético (glucagón)"],
+ ["Perfil de pérdida de peso","Reducción sostenida y ampliamente documentada","Reducción potencialmente mayor en estudios clínicos recientes"],
+ ["Efecto metabólico","Mejora marcada del control glucémico","Además del control glucémico, mayor movilización de grasa hepática"],
+ ["Evidencia clínica","Amplia, con aprobación regulatoria","En expansión, resultados clínicos muy prometedores"],
+ ["Ideal para","Paciente que busca un tratamiento consolidado y eficaz","Paciente que busca máxima potencia de pérdida de peso"],
+ ["Precio de dosis semanal","$950 MXN (dosis 2.5 mg)","$1,150 MXN (dosis 2mg)"]
+];
+document.getElementById("comp-body").innerHTML=comp.map(function(r){
+ return '<div class="trow"><div class="k">'+r[0]+'</div><div class="c"><span class="chk p">✔</span><span>'+r[1]+'</span></div><div class="c reta"><span class="chk a">✔</span><span>'+r[2]+'</span></div></div>';
+}).join("");
+// Mecanismo features
+var feats=[
+ ["🧠","Regulación del apetito","Ambos actúan sobre los centros del hambre y la saciedad, ayudando a controlar la ingesta."],
+ ["🍽","Vaciamiento gástrico","Prolongan la sensación de plenitud tras las comidas y reducen los picos glucémicos."],
+ ["📈","Control glucémico","Estimulan la insulina dependiente de glucosa y reducen glucagón (Tirzepatida) o lo modulan (Retatrutida)."],
+ ["🔥","Gasto energético","La Retatrutida añade acción sobre el receptor de glucagón, un tercer mecanismo que potencia el gasto calórico y una mayor movilización de las reservas de grasa."]
+];
+document.getElementById("mec-feats").innerHTML=feats.map(function(f,i){
+ return '<article class="feat reveal"><div class="ic" style="font-size:1.4rem">'+f[0]+'</div><h3>'+f[1]+'</h3><p>'+f[2]+'</p><span class="n">0'+(i+1)+'</span></article>';
+}).join("");
+// Candidatos
+var cand=["Personas con dificultad para bajar de peso a pesar de intentos previos.","Pacientes con sobrepeso u obesidad que buscan un abordaje médico serio.","Pacientes con resistencia a la insulina o alteraciones metabólicas.","Personas con mayor apetito o dificultad para controlar porciones.","Pacientes que requieren seguimiento médico continuo y personalizado.","Adultos interesados en monitorear su composición corporal con InBody."];
+document.getElementById("cand-list").innerHTML=cand.map(function(c){return '<li><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><p>'+c+'</p></li>';}).join("");
+// Beneficios
+var bens=[
+ ["🩺","Consulta médica completa","Valoración profesional inicial que define si tu caso se ajusta a Tirzepatida o Retatrutida."],
+ ["❤","Acompañamiento profesional","Atención directa con el equipo médico durante todo el programa de manera semanal."],
+ ["📊","Monitoreo InBody","Análisis de composición corporal: % grasa corporal, IMC, masa muscular total y agua."],
+ ["⚙","Ajuste personalizado","Tu dosis y plan se adaptan según tu respuesta clínica, tolerancia y objetivos."],
+ ["🗓","Subsecuentes sin costo","Las consultas médicas y mediciones de seguimiento se incluyen sin costo adicional."],
+ ["📉","Seguimiento estructurado","Control profesional continuo con metas claras y medibles para alcanzar tus objetivos."]
+];
+document.getElementById("ben-cards").innerHTML=bens.map(function(b,i){return '<div class="c reveal"><div style="font-size:1.8rem">'+b[0]+'</div><h3>'+b[1]+'</h3><p>'+b[2]+'</p></div>';}).join("");
+// Proceso
+var steps=[
+ ["01","Agenda tu valoración","Contáctanos por WhatsApp o teléfono y reserva tu cita en Ciudad del Carmen o Villahermosa."],
+ ["02","Evaluación y elección","Historia clínica, InBody y decisión clínica entre Tirzepatida o Retatrutida."],
+ ["03","Inicia tu programa","Comienzas con seguimiento médico semanal y metas claras."],
+ ["04","Monitorea tu evolución","Control profesional continuo con ajustes según progreso y tolerancia."]
+];
+document.getElementById("steps").innerHTML=steps.map(function(s){return '<div class="step reveal"><div class="num">'+s[0]+'</div><h3>'+s[1]+'</h3><p>'+s[2]+'</p></div>';}).join("");
+// Testimonios
+var tes=[
+ ["María G.","Programa con Tirzepatida","El acompañamiento médico marcó la diferencia. Sentí orden, claridad y cero presión. Por fin encontré un proceso serio."],
+ ["Roberto A.","Programa con Retatrutida","Las mediciones con InBody me ayudaron a entender mi evolución real. El equipo siempre está disponible para resolver dudas."],
+ ["Lucía M.","Programa con Tirzepatida","Lo que más valoro es el plan personalizado. No es algo genérico, todo se ajusta a mí y a cómo voy avanzando."]
+];
+document.getElementById("testis").innerHTML=tes.map(function(t){return '<article class="tcard reveal"><div style="font-size:1.8rem;color:var(--accent)">“</div><p class="q">“'+t[2]+'”</p><div class="who"><p class="n">'+t[0]+'</p><p class="r">'+t[1]+'</p></div></article>';}).join("");
+// FAQ
+var faqs=[
+ ["¿Cuál es la diferencia principal entre Tirzepatida y Retatrutida?","La Tirzepatida es un agonista dual (GIP + GLP-1) con amplia evidencia clínica y aprobación regulatoria. La Retatrutida es un agonista triple (GIP + GLP-1 + Glucagón) que suma un efecto adicional sobre el gasto energético, con resultados clínicos prometedores en pérdida de peso."],
+ ["¿Cuál es más efectiva para bajar de peso?","Ambas son altamente efectivas dentro de un programa médico. Los estudios sugieren que la Retatrutida puede alcanzar mayores porcentajes de pérdida de peso, pero la elección depende de tu perfil clínico, tolerancia y objetivos. El médico define cuál es la mejor opción tras tu valoración."],
+ ["¿Cuánto cuesta cada programa?","La consulta inicial cuesta $1,000 MXN. La dosis semanal de Tirzepatida es de $950 MXN (2.5 mg). La dosis semanal de Retatrutida es de $1,150 MXN. Las consultas subsecuentes y los InBody de seguimiento son sin costo."],
+ ["¿Cómo se aplican?","Ambos son de aplicación subcutánea semanal, realizada bajo supervisión médica en el consultorio."],
+ ["¿Todos los pacientes son candidatos?","No. La idoneidad se determina siempre mediante una valoración médica previa, donde se evalúa cada caso de forma individual y se elige el péptido más apropiado."],
+ ["¿En dónde están sus consultorios?","Contamos con dos ubicaciones: Ciudad del Carmen, Campeche (Calle 55 #93, Clínica Cesat) y Villahermosa, Tabasco (Av. Paseo Tabasco, Plaza Ambientación, local 02)."],
+ ["¿Cómo se da el seguimiento?","Mediante consultas subsecuentes sin costo y mediciones periódicas con InBody, también sin costo. En cada subsecuente solo se cobra la dosis aplicada."],
+ ["¿Cómo agendo mi cita?","Contáctanos por WhatsApp al +52 938 383 4002 o +52 938 128 2453, llámanos o llena el formulario. Te confirmaremos disponibilidad para tu valoración."]
+];
+document.getElementById("faq").innerHTML=faqs.map(function(f){return '<div class="qa reveal"><button>'+f[0]+'<span class="arm">▾</span></button><div class="a"><p>'+f[1]+'</p></div></div>';}).join("");
+document.querySelectorAll(".qa button").forEach(function(b){
+ b.addEventListener("click",function(){
+   var qa=b.parentElement,a=qa.querySelector(".a"),isOpen=qa.classList.contains("open");
+   document.querySelectorAll(".qa.open").forEach(function(o){o.classList.remove("open");o.querySelector(".a").style.maxHeight=null;});
+   if(!isOpen){qa.classList.add("open");a.style.maxHeight=a.scrollHeight+"px";}
+ });
+});
+// Contact form -> WhatsApp
+document.getElementById("contactForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ var f=e.target;
+ if(!f.nombre.value.trim()||!f.telefono.value.trim()||!f.correo.value.trim()||!f.interes.value.trim()){f.reportValidity();return;}
+ var t="Hola, soy "+f.nombre.value.trim()+". Me interesa el programa ("+f.interes.value.trim()+")."+"\nTeléfono: "+f.telefono.value.trim()+"\nCorreo: "+f.correo.value.trim()+(f.mensaje.value.trim()?"\nMensaje: "+f.mensaje.value.trim():"");
+ window.open(wa("529383834002",t),"_blank","noopener");
+ f.reset();
+});
+// Year
+document.getElementById("copy").textContent="© "+new Date().getFullYear()+" Medicina Laboral Carmen SA de CV. Todos los derechos reservados.";
+// Reveal
+(function(){
+ var els=document.querySelectorAll(".reveal");
+ var rm=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ if(rm||!("IntersectionObserver" in window)){els.forEach(function(el){el.classList.add("is-visible");});return;}
+ var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("is-visible");io.unobserve(e.target);}});},{threshold:.08,rootMargin:"0px 0px -40px 0px"});
+ els.forEach(function(el){io.observe(el);});
+ setTimeout(function(){document.querySelectorAll(".reveal:not(.is-visible)").forEach(function(el){el.classList.add("is-visible");});},3000);
+})();
+</script>
+</body>
+</html>
