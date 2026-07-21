@@ -308,9 +308,25 @@ footer{background:var(--primary);color:var(--pfg)}
 @media(max-width:640px){.car-btn{display:none}}
 
 .mec-stack{margin-top:3rem;display:flex;flex-direction:column;align-items:center;gap:2.5rem}
-.mec-stack .figframe{width:100%;max-width:1080px}
+.mec-stack .figframe{width:100%;max-width:1000px;position:relative;cursor:zoom-in}
 .mec-stack>.reveal:not(.figframe){max-width:60rem;text-align:center}
 .mec-stack>.reveal:not(.figframe) .quotebar{border:none;padding:0}
+
+/* tips section highlight */
+.tips-section{background:linear-gradient(180deg,hsl(184 32% 95%) 0%,hsl(40 33% 98%) 72%);border-top:1px solid hsl(188 40% 88%);border-bottom:1px solid hsl(188 40% 88%)}
+.tips-section .eyebrow{display:inline-block;background:hsl(188 75% 22% / .09);color:var(--primary);padding:.32rem .95rem;border-radius:999px}
+.tips-section .head h2::after{content:"";display:block;width:66px;height:3px;border-radius:3px;background:var(--gradient-gold);margin:1.1rem auto 0}
+.tip-num{display:inline-block;background:var(--gradient-gold);color:#fff;font-family:"Inter",sans-serif;font-weight:700;font-size:.78rem;padding:.16rem .62rem;border-radius:999px;letter-spacing:.04em}
+.tip-card{position:relative;transition:box-shadow .4s var(--ease),transform .4s var(--ease)}
+.tip-card:hover{transform:translateY(-6px)}
+.tip-img img{transition:transform .5s var(--ease)}
+.tip-card:hover .tip-img img{transform:scale(1.06)}
+/* infographic zoom hint + lightbox */
+.mec-stack .figframe::after{content:"\2922";position:absolute;top:1.3rem;right:1.3rem;width:2.1rem;height:2.1rem;display:grid;place-items:center;background:rgba(18,48,43,.72);color:#fff;border-radius:999px;font-size:1.1rem;pointer-events:none}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(10,22,20,.93);padding:2rem;cursor:zoom-out}
+.lightbox.open{display:flex;align-items:center;justify-content:center}
+.lightbox img{max-width:96vw;max-height:92vh;border-radius:.5rem;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+.lb-close{position:fixed;top:.8rem;right:1.4rem;background:none;border:none;color:#fff;font-size:2.6rem;line-height:1;cursor:pointer}
 </style>
 </head>
 <body>
@@ -436,7 +452,7 @@ footer{background:var(--primary);color:var(--pfg)}
       <p class="lead">Cómo actúan estos péptidos dentro de un programa médico integral de control de peso.</p>
     </div>
     <div class="mec-stack">
-      <div class="reveal figframe">
+      <div class="reveal figframe" onclick="openLb('./mecanismo-incretinas.png','Infografía de efectos de GLP-1, GIP y glucagón')">
         <img src="./mecanismo-incretinas.png" alt="Infografía: efectos de GLP-1, GIP y glucagón sobre intestino, cerebro, músculo, páncreas, hígado, tejido adiposo, corazón y termogénesis" width="1920" height="1348" loading="lazy" decoding="async" />
       </div>
       <div class="reveal">
@@ -571,7 +587,7 @@ footer{background:var(--primary);color:var(--pfg)}
 </section>
 
 <!-- TIPS -->
-<section id="tips" class="section soft">
+<section id="tips" class="section tips-section">
   <div class="container">
     <div class="head center reveal">
       <span class="eyebrow">Recomendaciones</span>
@@ -712,6 +728,8 @@ footer{background:var(--primary);color:var(--pfg)}
   </div>
 </footer>
 
+<div id="lightbox" class="lightbox" onclick="closeLb()"><button class="lb-close" aria-label="Cerrar" onclick="closeLb()">×</button><img id="lightbox-img" src="" alt=""></div>
+
 <div class="wafloat">
   <a data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener"><span class="ping"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> <span class="lbl">Agendar cita</span></a>
 </div>
@@ -812,6 +830,9 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
 // Year
 document.getElementById("copy").textContent="© "+new Date().getFullYear()+" Medicina Laboral Carmen SA de CV. Todos los derechos reservados.";
 function tipScroll(dir){var c=document.getElementById('tipCarousel');if(!c)return;var card=c.querySelector('.tip-card');c.scrollBy({left:dir*((card?card.offsetWidth:320)+24),behavior:'smooth'});}
+function openLb(src,alt){var l=document.getElementById('lightbox');var im=document.getElementById('lightbox-img');im.src=src;im.alt=alt||'';l.classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 // Reveal
 (function(){
  var els=document.querySelectorAll(".reveal");
