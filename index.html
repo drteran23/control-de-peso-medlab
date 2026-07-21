@@ -306,6 +306,11 @@ footer{background:var(--primary);color:var(--pfg)}
 .car-btn:hover{background:var(--primary);color:#fff}
 .car-btn.prev{left:-.6rem}.car-btn.next{right:-.6rem}
 @media(max-width:640px){.car-btn{display:none}}
+
+.mec-stack{margin-top:3rem;display:flex;flex-direction:column;align-items:center;gap:2.5rem}
+.mec-stack .figframe{width:100%;max-width:1080px}
+.mec-stack>.reveal:not(.figframe){max-width:60rem;text-align:center}
+.mec-stack>.reveal:not(.figframe) .quotebar{border:none;padding:0}
 </style>
 </head>
 <body>
@@ -325,6 +330,7 @@ footer{background:var(--primary);color:var(--pfg)}
       <a href="#para-quien">Candidatos</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#precios">Inversión</a>
+      <a href="#tips">Recomendaciones</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="navcta">
@@ -342,6 +348,7 @@ footer{background:var(--primary);color:var(--pfg)}
       <a href="#para-quien">Candidatos</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#precios">Inversión</a>
+      <a href="#tips">Recomendaciones</a>
       <a href="#contacto">Contacto</a>
       <a class="btn btn-hero" style="margin-top:.5rem" href="#contacto">Agendar Consulta Inicial</a>
     </div>
@@ -428,7 +435,7 @@ footer{background:var(--primary);color:var(--pfg)}
       <h2>Mecanismo de acción</h2>
       <p class="lead">Cómo actúan estos péptidos dentro de un programa médico integral de control de peso.</p>
     </div>
-    <div class="mec-grid">
+    <div class="mec-stack">
       <div class="reveal figframe">
         <img src="./mecanismo-incretinas.png" alt="Infografía: efectos de GLP-1, GIP y glucagón sobre intestino, cerebro, músculo, páncreas, hígado, tejido adiposo, corazón y termogénesis" width="1920" height="1348" loading="lazy" decoding="async" />
       </div>
@@ -573,7 +580,7 @@ footer{background:var(--primary);color:var(--pfg)}
     </div>
     <div class="carousel-wrap reveal">
       <button class="car-btn prev" aria-label="Anterior" onclick="tipScroll(-1)">‹</button>
-      <div class="carousel" id="tipCarousel"><article class="tip-card"><div class="tip-img"><img src="./tip-alimentacion.jpg" alt="Alimentación saludable" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">01</span><h3>Buena alimentación</h3><p>Acompaña tu tratamiento con una dieta equilibrada y balanceada, rica en verduras y proteína magra.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-ejercicio.jpg" alt="Actividad física" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">02</span><h3>Actividad física regular</h3><p>Realiza ejercicio de forma constante para acelerar y sostener tus resultados a largo plazo.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-suplementos.jpg" alt="Suplementos indicados" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">03</span><h3>Suplementos indicados</h3><p>Toma únicamente los suplementos que tu médico te recomiende según tu valoración.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-agua.jpg" alt="Hidratación" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">04</span><h3>Hidratación diaria</h3><p>Bebe alrededor de 2 litros de agua al día para apoyar tu metabolismo y bienestar.</p></div></article></div>
+      <div class="carousel" id="tipCarousel"><article class="tip-card"><div class="tip-img"><img src="./tip-alimentacion.jpg" alt="Alimentación saludable" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">01</span><h3>Buena alimentación</h3><p>Acompaña tu tratamiento con una alimentación equilibrada: prioriza verduras y proteína magra, y reduce los ultraprocesados y el azúcar.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-ejercicio.jpg" alt="Actividad física" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">02</span><h3>Actividad física</h3><p>Muévete al menos 30 minutos la mayoría de los días. La constancia potencia y ayuda a mantener tus resultados.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-suplementos.jpg" alt="Suplementos indicados" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">03</span><h3>Suplementos indicados</h3><p>Toma únicamente los suplementos que tu médico te indique según tu valoración clínica, nunca por cuenta propia.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-agua.jpg" alt="Hidratación" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">04</span><h3>Hidratación</h3><p>Bebe alrededor de 2 litros de agua al día para apoyar tu metabolismo y ayudar a controlar el apetito.</p></div></article></div>
       <button class="car-btn next" aria-label="Siguiente" onclick="tipScroll(1)">›</button>
     </div>
   </div>
