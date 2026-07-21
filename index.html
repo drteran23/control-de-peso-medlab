@@ -279,6 +279,33 @@ footer{background:var(--primary);color:var(--pfg)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.is-visible{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}*{animation-duration:.001ms!important;transition-duration:.001ms!important}.wafloat .ping{animation:none}}
+
+.badge svg{width:.85rem;height:.85rem;stroke-width:2.2;margin-right:.15rem;vertical-align:-2px}
+.note .ic svg,.info .ic svg{width:1.3rem;height:1.3rem}
+.ben-ic svg{width:2.1rem;height:2.1rem;color:var(--accent-soft);stroke-width:1.6}
+.feat .ic svg{width:1.7rem;height:1.7rem;color:var(--primary);stroke-width:1.7}
+.chip svg{width:1rem;height:1rem;vertical-align:-3px}
+.hero-phones .p svg{width:1rem;height:1rem;color:var(--primary);vertical-align:-3px}
+.plan li svg{color:var(--primary)}
+.wafloat a svg{width:1.35rem;height:1.35rem}
+/* tips carousel */
+.carousel-wrap{position:relative;margin-top:3rem}
+.carousel{display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.5rem .25rem 1.5rem;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{height:8px}
+.carousel::-webkit-scrollbar-thumb{background:var(--border);border-radius:999px}
+.tip-card{flex:0 0 300px;scroll-snap-align:start;background:var(--card);border:1px solid var(--border);border-radius:1.25rem;overflow:hidden;box-shadow:var(--shadow-card);transition:box-shadow .4s var(--ease)}
+.tip-card:hover{box-shadow:var(--shadow-elegant)}
+@media(min-width:768px){.tip-card{flex-basis:340px}}
+.tip-img{aspect-ratio:4/3;overflow:hidden}
+.tip-img img{width:100%;height:100%;object-fit:cover;display:block}
+.tip-body{padding:1.5rem}
+.tip-num{font-family:"Playfair Display",serif;font-size:.95rem;color:var(--accent)}
+.tip-body h3{margin-top:.3rem;font-size:1.4rem;color:var(--fg)}
+.tip-body p{margin-top:.6rem;color:var(--muted-fg);font-size:.95rem}
+.car-btn{position:absolute;top:34%;transform:translateY(-50%);z-index:2;width:2.75rem;height:2.75rem;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--primary);font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:var(--shadow-card);display:grid;place-items:center}
+.car-btn:hover{background:var(--primary);color:#fff}
+.car-btn.prev{left:-.6rem}.car-btn.next{right:-.6rem}
+@media(max-width:640px){.car-btn{display:none}}
 </style>
 </head>
 <body>
@@ -325,15 +352,15 @@ footer{background:var(--primary);color:var(--pfg)}
 <section class="hero">
   <div class="container hero-grid">
     <div class="reveal">
-      <span class="badge">🛡 Programa médico especializado · Cd. del Carmen · Villahermosa</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Programa médico especializado · Cd. del Carmen · Villahermosa</span>
       <h1>Programa de Control de peso especializado con <span class="tprimary italic">TIRZEPATIDA</span> y <span class="tprimary italic">RETATRUTIDA</span> bajo seguimiento médico.</h1>
       <p class="lead">En Medicina Laboral Carmen te acompañamos con una valoración médica, InBody de última generación y un plan personalizado con el péptido más adecuado para tu caso. Descubre las diferencias, beneficios y precios de cada uno.</p>
       <div class="hero-actions">
         <a class="btn btn-hero btn-lg" href="#contacto">Agendar Consulta Inicial →</a>
-        <a class="btn btn-outline btn-lg" data-wa="Hola, me interesa el programa médico de control de peso." target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn btn-outline btn-lg" data-wa="Hola, me interesa el programa médico de control de peso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp</a>
       </div>
       <div class="hero-phones">
-        <span class="p">📞 <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529383834002" target="_blank" rel="noopener">+52 938 383 4002</a>, <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529381282453" target="_blank" rel="noopener">+52 938 128 2453</a></span>
+        <span class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529383834002" target="_blank" rel="noopener">+52 938 383 4002</a>, <a data-wa="Hola, me interesa el programa médico de control de peso." data-phone="529381282453" target="_blank" rel="noopener">+52 938 128 2453</a></span>
         <span class="muted">Dr. Fernando Terán · Dra. Geraldine Cabrera</span>
       </div>
     </div>
@@ -369,7 +396,7 @@ footer{background:var(--primary);color:var(--pfg)}
       </article>
     </div>
     <div class="note reveal">
-      <div class="ic">✨</div>
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg></div>
       <p><strong style="color:var(--fg)">Importante:</strong> el uso de ambos péptidos requiere valoración médica previa. La elección del fármaco depende de tu perfil clínico y objetivos.</p>
     </div>
   </div>
@@ -463,10 +490,10 @@ footer{background:var(--primary);color:var(--pfg)}
         <h3>Consulta médica inicial (primera vez, único pago).</h3>
         <p class="price">$1,000<small>MXN</small></p>
         <ul>
-          <li>✔ Valoración médica completa</li>
-          <li>✔ Historia clínica orientada al control de peso</li>
-          <li>✔ Recomendación entre Tirzepatida o Retatrutida</li>
-          <li>✔ Análisis InBody inicial</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Valoración médica completa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Historia clínica orientada al control de peso</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Recomendación entre Tirzepatida o Retatrutida</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Análisis InBody inicial</li>
         </ul>
         <a class="btn btn-outline btn-block" data-wa="Hola, quiero agendar mi consulta inicial ($1,000 MXN)." target="_blank" rel="noopener">Agendar consulta inicial →</a>
       </article>
@@ -478,13 +505,13 @@ footer{background:var(--primary);color:var(--pfg)}
         <p class="price">$950<small>MXN</small></p>
         <p class="pnote">Aplicación de dosis 2.5 mg bajo supervisión médica. Si la dosis requerida aumenta, el precio puede variar.</p>
         <ul>
-          <li>✔ Análisis InBody de composición corporal</li>
-          <li>✔ Aplicación de dosis bajo supervisión médica</li>
-          <li>✔ Consultas subsecuentes sin costo</li>
-          <li>✔ InBody subsecuente sin costo</li>
-          <li>✔ En subsecuentes solo se cobra la dosis aplicada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Análisis InBody de composición corporal</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Aplicación de dosis bajo supervisión médica</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Consultas subsecuentes sin costo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>InBody subsecuente sin costo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>En subsecuentes solo se cobra la dosis aplicada</li>
         </ul>
-        <a class="btn btn-gold btn-block" data-wa="Hola, quiero información sobre el programa con Tirzepatida ($950 MXN por dosis semanal)." target="_blank" rel="noopener">💬 Solicitar por WhatsApp</a>
+        <a class="btn btn-gold btn-block" data-wa="Hola, quiero información sobre el programa con Tirzepatida ($950 MXN por dosis semanal)." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Solicitar por WhatsApp</a>
       </article>
       <article class="plan reveal">
         <p class="k">Agonista triple</p>
@@ -493,19 +520,19 @@ footer{background:var(--primary);color:var(--pfg)}
         <p class="price">$1,150<small>MXN</small></p>
         <p class="pnote">Aplicación de dosis semanal bajo supervisión médica dentro del programa integral.</p>
         <ul>
-          <li>✔ Análisis InBody de composición corporal</li>
-          <li>✔ Aplicación de dosis bajo supervisión médica</li>
-          <li>✔ Consultas subsecuentes sin costo</li>
-          <li>✔ InBody subsecuente sin costo</li>
-          <li>✔ En subsecuentes solo se cobra la dosis aplicada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Análisis InBody de composición corporal</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Aplicación de dosis bajo supervisión médica</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Consultas subsecuentes sin costo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>InBody subsecuente sin costo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>En subsecuentes solo se cobra la dosis aplicada</li>
         </ul>
-        <a class="btn btn-outline btn-block" data-wa="Hola, quiero información sobre el programa con Retatrutida ($1,150 MXN por dosis semanal)." target="_blank" rel="noopener">💬 Solicitar por WhatsApp</a>
+        <a class="btn btn-outline btn-block" data-wa="Hola, quiero información sobre el programa con Retatrutida ($1,150 MXN por dosis semanal)." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Solicitar por WhatsApp</a>
       </article>
     </div>
     <div class="price-foot reveal">
-      <span class="chip">✨ Consultas subsecuentes e InBody de seguimiento sin costo.</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg> Consultas subsecuentes e InBody de seguimiento sin costo.</span>
       <div style="margin-top:1.5rem">
-        <a class="btn btn-hero btn-lg" style="padding-inline:2.5rem" data-wa="Hola, me interesa el programa. ¿Pueden ayudarme a decidir entre Tirzepatida y Retatrutida?" target="_blank" rel="noopener">💬 Hablar ahora por WhatsApp</a>
+        <a class="btn btn-hero btn-lg" style="padding-inline:2.5rem" data-wa="Hola, me interesa el programa. ¿Pueden ayudarme a decidir entre Tirzepatida y Retatrutida?" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Hablar ahora por WhatsApp</a>
       </div>
       <p class="muted" style="margin-top:1.5rem;font-size:.85rem">Precios en pesos mexicanos. La aplicación se realiza siempre bajo valoración y supervisión médica con el Dr. Fernando Terán y la Dra. Geraldine Cabrera.</p>
     </div>
@@ -536,6 +563,22 @@ footer{background:var(--primary);color:var(--pfg)}
   </div>
 </section>
 
+<!-- TIPS -->
+<section id="tips" class="section soft">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">Recomendaciones</span>
+      <h2>Potencia tus resultados con hábitos saludables</h2>
+      <p class="lead">El tratamiento médico siempre debe acompañarse de un estilo de vida saludable. Estos son los pilares que reforzamos en cada consulta.</p>
+    </div>
+    <div class="carousel-wrap reveal">
+      <button class="car-btn prev" aria-label="Anterior" onclick="tipScroll(-1)">‹</button>
+      <div class="carousel" id="tipCarousel"><article class="tip-card"><div class="tip-img"><img src="./tip-alimentacion.jpg" alt="Alimentación saludable" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">01</span><h3>Buena alimentación</h3><p>Acompaña tu tratamiento con una dieta equilibrada y balanceada, rica en verduras y proteína magra.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-ejercicio.jpg" alt="Actividad física" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">02</span><h3>Actividad física regular</h3><p>Realiza ejercicio de forma constante para acelerar y sostener tus resultados a largo plazo.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-suplementos.jpg" alt="Suplementos indicados" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">03</span><h3>Suplementos indicados</h3><p>Toma únicamente los suplementos que tu médico te recomiende según tu valoración.</p></div></article><article class="tip-card"><div class="tip-img"><img src="./tip-agua.jpg" alt="Hidratación" loading="lazy" decoding="async"></div><div class="tip-body"><span class="tip-num">04</span><h3>Hidratación diaria</h3><p>Bebe alrededor de 2 litros de agua al día para apoyar tu metabolismo y bienestar.</p></div></article></div>
+      <button class="car-btn next" aria-label="Siguiente" onclick="tipScroll(1)">›</button>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="section soft">
   <div class="container">
@@ -556,7 +599,7 @@ footer{background:var(--primary);color:var(--pfg)}
       <p class="lead" style="margin-top:1.1rem">Déjanos tus datos y te contactamos por WhatsApp para agendar tu cita con el Dr. Fernando Terán y la Dra. Geraldine Cabrera.</p>
       <div class="info">
         <div class="row">
-          <div class="ic">📞</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <div>
             <p class="k">Teléfono / WhatsApp</p>
             <div class="big">
@@ -566,7 +609,7 @@ footer{background:var(--primary);color:var(--pfg)}
           </div>
         </div>
         <div class="row">
-          <div class="ic">📍</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div>
             <p class="k">Ciudad del Carmen, Campeche</p>
             <p style="color:var(--fg);font-weight:500">Oficinas Medicina Laboral Carmen SA de CV</p>
@@ -574,7 +617,7 @@ footer{background:var(--primary);color:var(--pfg)}
           </div>
         </div>
         <div class="row">
-          <div class="ic">📍</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div>
             <p class="k">Villahermosa, Tabasco</p>
             <p style="color:var(--fg);font-weight:500">Consultorio Villahermosa</p>
@@ -582,7 +625,7 @@ footer{background:var(--primary);color:var(--pfg)}
           </div>
         </div>
         <div class="row">
-          <div class="ic">🕒</div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <div>
             <p class="k">Horarios de atención</p>
             <p style="font-size:.9rem"><span style="font-weight:600">Lunes a viernes:</span> <span class="muted">9:00 a.m. – 1:30 p.m. y 4:00 p.m. – 5:30 p.m.</span></p>
@@ -590,7 +633,7 @@ footer{background:var(--primary);color:var(--pfg)}
           </div>
         </div>
       </div>
-      <a class="btn btn-wa" style="margin-top:2.5rem" data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener">💬 Escribir directo por WhatsApp</a>
+      <a class="btn btn-wa" style="margin-top:2.5rem" data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Escribir directo por WhatsApp</a>
     </div>
     <div class="reveal">
       <form class="form" id="contactForm" novalidate>
@@ -621,7 +664,7 @@ footer{background:var(--primary);color:var(--pfg)}
           <p>Agenda tu cita con cualquiera de nuestros médicos especializados en péptidos para control de peso y descubre si Tirzepatida o Retatrutida es la mejor opción para ti.</p>
         </div>
         <div class="btns">
-          <a class="btn btn-gold btn-block" data-wa="Hola, quiero agendar mi valoración para el programa médico de control de peso." target="_blank" rel="noopener">💬 Agendar cita por WhatsApp</a>
+          <a class="btn btn-gold btn-block" data-wa="Hola, quiero agendar mi valoración para el programa médico de control de peso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Agendar cita por WhatsApp</a>
           <a class="btn btn-light btn-block" data-wa="Hola, quiero agendar mi valoración." data-phone="529381282453" target="_blank" rel="noopener">WhatsApp +52 938 128 2453 →</a>
         </div>
       </div>
@@ -642,15 +685,15 @@ footer{background:var(--primary);color:var(--pfg)}
     <div>
       <p class="kf">Contacto</p>
       <ul>
-        <li class="row">📞 <div><a data-wa="Hola, me interesa el programa médico." data-phone="529383834002" target="_blank" rel="noopener">+52 938 383 4002</a><br><a data-wa="Hola, me interesa el programa médico." data-phone="529381282453" target="_blank" rel="noopener">+52 938 128 2453</a></div></li>
-        <li class="row">🕒 <div class="sub"><span style="color:var(--pfg);font-weight:600">Lunes a viernes:</span> 9:00 a.m. – 1:30 p.m. y 4:00 p.m. – 5:30 p.m.<br><span style="color:var(--pfg);font-weight:600">Sábado y domingo:</span> 8:00 a.m. – 1:30 p.m.</div></li>
+        <li class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><a data-wa="Hola, me interesa el programa médico." data-phone="529383834002" target="_blank" rel="noopener">+52 938 383 4002</a><br><a data-wa="Hola, me interesa el programa médico." data-phone="529381282453" target="_blank" rel="noopener">+52 938 128 2453</a></div></li>
+        <li class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div class="sub"><span style="color:var(--pfg);font-weight:600">Lunes a viernes:</span> 9:00 a.m. – 1:30 p.m. y 4:00 p.m. – 5:30 p.m.<br><span style="color:var(--pfg);font-weight:600">Sábado y domingo:</span> 8:00 a.m. – 1:30 p.m.</div></li>
       </ul>
     </div>
     <div>
       <p class="kf">Ubicaciones</p>
       <div class="locs" style="margin-top:1.25rem">
-        <div class="row">📍 <div><p style="color:var(--pfg);font-weight:600">Ciudad del Carmen, Campeche</p><p class="sub" style="color:hsl(40 33% 98% / .7)">Calle 55, número 93, Clínica Cesat.<br>Ciudad del Carmen, Campeche.</p></div></div>
-        <div class="row">📍 <div><p style="color:var(--pfg);font-weight:600">Villahermosa, Tabasco</p><p class="sub" style="color:hsl(40 33% 98% / .7)">Av. Paseo Tabasco, Plaza Ambientación, local 02.<br>Villahermosa, Tabasco.</p></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><div><p style="color:var(--pfg);font-weight:600">Ciudad del Carmen, Campeche</p><p class="sub" style="color:hsl(40 33% 98% / .7)">Calle 55, número 93, Clínica Cesat.<br>Ciudad del Carmen, Campeche.</p></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><div><p style="color:var(--pfg);font-weight:600">Villahermosa, Tabasco</p><p class="sub" style="color:hsl(40 33% 98% / .7)">Av. Paseo Tabasco, Plaza Ambientación, local 02.<br>Villahermosa, Tabasco.</p></div></div>
       </div>
     </div>
   </div>
@@ -663,7 +706,7 @@ footer{background:var(--primary);color:var(--pfg)}
 </footer>
 
 <div class="wafloat">
-  <a data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener"><span class="ping"></span>💬 <span class="lbl">Agendar cita</span></a>
+  <a data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener"><span class="ping"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> <span class="lbl">Agendar cita</span></a>
 </div>
 
 <script>
@@ -678,6 +721,7 @@ function onScroll(){nav.classList.toggle("scrolled",window.scrollY>24);}
 onScroll();window.addEventListener("scroll",onScroll,{passive:true});
 document.getElementById("menubtn").addEventListener("click",function(){mob.classList.toggle("open");});
 mob.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){mob.classList.remove("open");});});
+var ICONS={stethoscope:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>',heartpulse:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>',activity:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',sliders:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="2" x2="6" y1="14" y2="14"/><line x1="10" x2="14" y1="8" y2="8"/><line x1="18" x2="22" y1="16" y2="16"/></svg>',calendarcheck:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>',trending:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>',brain:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg>',utensils:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>',droplet:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>',flame:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>'};
 // Comparativa rows
 var comp=[
  ["Clase","Agonista dual GIP / GLP-1","Agonista triple GIP / GLP-1 / Glucagón"],
@@ -690,31 +734,31 @@ var comp=[
  ["Precio de dosis semanal","$950 MXN (dosis 2.5 mg)","$1,150 MXN (dosis 2mg)"]
 ];
 document.getElementById("comp-body").innerHTML=comp.map(function(r){
- return '<div class="trow"><div class="k">'+r[0]+'</div><div class="c"><span class="chk p">✔</span><span>'+r[1]+'</span></div><div class="c reta"><span class="chk a">✔</span><span>'+r[2]+'</span></div></div>';
+ return '<div class="trow"><div class="k">'+r[0]+'</div><div class="c"><svg class="chk p" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>'+r[1]+'</span></div><div class="c reta"><svg class="chk a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>'+r[2]+'</span></div></div>';
 }).join("");
 // Mecanismo features
 var feats=[
- ["🧠","Regulación del apetito","Ambos actúan sobre los centros del hambre y la saciedad, ayudando a controlar la ingesta."],
- ["🍽","Vaciamiento gástrico","Prolongan la sensación de plenitud tras las comidas y reducen los picos glucémicos."],
- ["📈","Control glucémico","Estimulan la insulina dependiente de glucosa y reducen glucagón (Tirzepatida) o lo modulan (Retatrutida)."],
- ["🔥","Gasto energético","La Retatrutida añade acción sobre el receptor de glucagón, un tercer mecanismo que potencia el gasto calórico y una mayor movilización de las reservas de grasa."]
+ ["brain","Regulación del apetito","Ambos actúan sobre los centros del hambre y la saciedad, ayudando a controlar la ingesta."],
+ ["utensils","Vaciamiento gástrico","Prolongan la sensación de plenitud tras las comidas y reducen los picos glucémicos."],
+ ["droplet","Control glucémico","Estimulan la insulina dependiente de glucosa y reducen glucagón (Tirzepatida) o lo modulan (Retatrutida)."],
+ ["flame","Gasto energético","La Retatrutida añade acción sobre el receptor de glucagón, un tercer mecanismo que potencia el gasto calórico y una mayor movilización de las reservas de grasa."]
 ];
 document.getElementById("mec-feats").innerHTML=feats.map(function(f,i){
- return '<article class="feat reveal"><div class="ic" style="font-size:1.4rem">'+f[0]+'</div><h3>'+f[1]+'</h3><p>'+f[2]+'</p><span class="n">0'+(i+1)+'</span></article>';
+ return '<article class="feat reveal"><div class="ic">'+ICONS[f[0]]+'</div><h3>'+f[1]+'</h3><p>'+f[2]+'</p><span class="n">0'+(i+1)+'</span></article>';
 }).join("");
 // Candidatos
 var cand=["Personas con dificultad para bajar de peso a pesar de intentos previos.","Pacientes con sobrepeso u obesidad que buscan un abordaje médico serio.","Pacientes con resistencia a la insulina o alteraciones metabólicas.","Personas con mayor apetito o dificultad para controlar porciones.","Pacientes que requieren seguimiento médico continuo y personalizado.","Adultos interesados en monitorear su composición corporal con InBody."];
 document.getElementById("cand-list").innerHTML=cand.map(function(c){return '<li><span class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span><p>'+c+'</p></li>';}).join("");
 // Beneficios
 var bens=[
- ["🩺","Consulta médica completa","Valoración profesional inicial que define si tu caso se ajusta a Tirzepatida o Retatrutida."],
- ["❤","Acompañamiento profesional","Atención directa con el equipo médico durante todo el programa de manera semanal."],
- ["📊","Monitoreo InBody","Análisis de composición corporal: % grasa corporal, IMC, masa muscular total y agua."],
- ["⚙","Ajuste personalizado","Tu dosis y plan se adaptan según tu respuesta clínica, tolerancia y objetivos."],
- ["🗓","Subsecuentes sin costo","Las consultas médicas y mediciones de seguimiento se incluyen sin costo adicional."],
- ["📉","Seguimiento estructurado","Control profesional continuo con metas claras y medibles para alcanzar tus objetivos."]
+ ["stethoscope","Consulta médica completa","Valoración profesional inicial que define si tu caso se ajusta a Tirzepatida o Retatrutida."],
+ ["heartpulse","Acompañamiento profesional","Atención directa con el equipo médico durante todo el programa de manera semanal."],
+ ["activity","Monitoreo InBody","Análisis de composición corporal: % grasa corporal, IMC, masa muscular total y agua."],
+ ["sliders","Ajuste personalizado","Tu dosis y plan se adaptan según tu respuesta clínica, tolerancia y objetivos."],
+ ["calendarcheck","Subsecuentes sin costo","Las consultas médicas y mediciones de seguimiento se incluyen sin costo adicional."],
+ ["trending","Seguimiento estructurado","Control profesional continuo con metas claras y medibles para alcanzar tus objetivos."]
 ];
-document.getElementById("ben-cards").innerHTML=bens.map(function(b,i){return '<div class="c reveal"><div style="font-size:1.8rem">'+b[0]+'</div><h3>'+b[1]+'</h3><p>'+b[2]+'</p></div>';}).join("");
+document.getElementById("ben-cards").innerHTML=bens.map(function(b,i){return '<div class="c reveal"><div class="ben-ic">'+ICONS[b[0]]+'</div><h3>'+b[1]+'</h3><p>'+b[2]+'</p></div>';}).join("");
 // Proceso
 var steps=[
  ["01","Agenda tu valoración","Contáctanos por WhatsApp o teléfono y reserva tu cita en Ciudad del Carmen o Villahermosa."],
@@ -760,6 +804,7 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
 });
 // Year
 document.getElementById("copy").textContent="© "+new Date().getFullYear()+" Medicina Laboral Carmen SA de CV. Todos los derechos reservados.";
+function tipScroll(dir){var c=document.getElementById('tipCarousel');if(!c)return;var card=c.querySelector('.tip-card');c.scrollBy({left:dir*((card?card.offsetWidth:320)+24),behavior:'smooth'});}
 // Reveal
 (function(){
  var els=document.querySelectorAll(".reveal");
