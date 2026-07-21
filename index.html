@@ -853,7 +853,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 // WhatsApp links
 function wa(phone,msg){return "https://api.whatsapp.com/send?phone="+phone+"&text="+encodeURIComponent(msg);}
 document.querySelectorAll("[data-wa]").forEach(function(el){
-  el.setAttribute("href", wa(el.dataset.phone||"529383834002", el.dataset.wa));
+  el.setAttribute("href", wa(el.dataset.phone||"529381282453", el.dataset.wa));
 });
 // Navbar scroll + mobile menu
 var nav=document.getElementById("nav"),mob=document.getElementById("mobile");
@@ -940,7 +940,7 @@ document.getElementById("contactForm").addEventListener("submit",function(e){
  if(!f.nombre.value.trim()||!f.telefono.value.trim()||!f.correo.value.trim()||!f.interes.value.trim()){f.reportValidity();return;}
  var t="Hola, soy "+f.nombre.value.trim()+". Me interesa el programa ("+f.interes.value.trim()+")."+"\nTeléfono: "+f.telefono.value.trim()+"\nCorreo: "+f.correo.value.trim()+(f.mensaje.value.trim()?"\nMensaje: "+f.mensaje.value.trim():"");
  try{fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(f)).toString()});}catch(err){}
- window.open(wa("529383834002",t),"_blank","noopener");
+ window.open(wa("529381282453",t),"_blank","noopener");
  f.reset();
 });
 // Year
