@@ -76,17 +76,18 @@ img{display:block;max-width:100%}
 /* navbar */
 header.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:all .4s var(--ease)}
 header.nav.scrolled{background:hsl(40 33% 98% / .88);backdrop-filter:blur(10px);border-bottom:1px solid hsl(40 18% 88% / .6);box-shadow:var(--shadow-soft)}
-.navrow{display:flex;height:5rem;align-items:center;justify-content:space-between;gap:1rem}
-.brand{display:flex;align-items:center;gap:.75rem}
-.brand img{height:3rem;width:3rem;border-radius:999px;object-fit:cover}
-.brand .bt{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-fg);border-left:1px solid hsl(40 18% 88%);padding-left:.75rem;line-height:1.35}
-.navlinks{display:none;gap:1.25rem;align-items:center}
-.navlinks a{font-size:.9rem;color:var(--muted-fg);white-space:nowrap;transition:color .2s}
+.navrow{display:flex;height:5.5rem;align-items:center;justify-content:space-between;gap:1.25rem}
+.brand{display:flex;align-items:center;gap:.85rem}
+.brand img{height:3.5rem;width:3.5rem;border-radius:999px;object-fit:cover;border:2px solid hsl(40 18% 90%)}
+.brand .bt{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-fg);border-left:1px solid hsl(40 18% 88%);padding-left:.85rem;line-height:1.4;white-space:nowrap}
+.navlinks{display:none;gap:1.15rem;align-items:center}
+.navlinks a{font-size:1rem;color:var(--muted-fg);white-space:nowrap;transition:color .2s;font-weight:500}
 .navlinks a:hover{color:var(--primary)}
 .navcta{display:none;align-items:center;gap:.75rem}
 .menubtn{display:inline-flex;background:none;border:none;color:var(--fg);padding:.5rem;cursor:pointer}
 .menubtn svg{width:1.6rem;height:1.6rem}
-@media(min-width:1200px){.navlinks{display:flex}.menubtn{display:none}.navcta{display:flex}}
+.navcta .btn{white-space:nowrap;font-size:.95rem;min-height:2.7rem}
+@media(min-width:1300px){.navlinks{display:flex}.menubtn{display:none}.navcta{display:flex}}
 .mobile{display:none;background:var(--bg);border-top:1px solid var(--border)}
 .mobile.open{display:block}
 .mobile .container{padding-top:1rem;padding-bottom:1rem;display:flex;flex-direction:column;gap:.5rem}
