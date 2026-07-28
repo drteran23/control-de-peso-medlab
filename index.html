@@ -383,6 +383,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .nav .container{max-width:1480px}
 section[id]{scroll-margin-top:6.5rem}
 #top{scroll-margin-top:0}
+
+.quiz-note{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:.9rem;padding:1.3rem 1.4rem;box-shadow:var(--shadow-card);margin-bottom:1.25rem}
+.quiz-note p{margin:0 0 .3rem;color:var(--fg)}
+.quiz-steps{margin:.3rem 0 1rem 1.1rem;color:var(--muted-fg);font-size:.95rem}
+.quiz-steps li{margin:.25rem 0}
+.quiz-wa{display:flex;flex-wrap:wrap;gap:.6rem}
+.quiz-wa .btn{font-size:.9rem}
+.form-embed{background:var(--card);border:1px solid var(--border);border-radius:1rem;overflow:hidden;box-shadow:var(--shadow-card)}
+.form-embed iframe{width:100%;min-height:1500px;border:0;display:block}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalClinic", "name": "Medicina Laboral Carmen — Control de peso (Tirzepatida y Retatrutida)", "url": "https://control-de-peso-medlab.netlify.app/", "logo": "https://control-de-peso-medlab.netlify.app/logo-mlc.jpg", "image": "https://control-de-peso-medlab.netlify.app/hero-peptido.jpg", "description": "Programa médico de control de peso con Tirzepatida y Retatrutida, valoración médica, InBody y seguimiento personalizado en Ciudad del Carmen y Villahermosa.", "telephone": "+52 938 383 4002", "priceRange": "$$", "medicalSpecialty": "Bariatrics", "areaServed": ["Ciudad del Carmen", "Villahermosa"], "address": {"@type": "PostalAddress", "streetAddress": "Calle 55, número 93, Clínica Cesat", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24100", "addressCountry": "MX"}, "location": [{"@type": "Place", "name": "Medicina Laboral Carmen — Ciudad del Carmen", "address": {"@type": "PostalAddress", "streetAddress": "Calle 55, número 93, Clínica Cesat", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "addressCountry": "MX"}}, {"@type": "Place", "name": "Consultorio Villahermosa", "address": {"@type": "PostalAddress", "streetAddress": "Av. Paseo Tabasco, Plaza Ambientación, local 02", "addressLocality": "Villahermosa", "addressRegion": "Tabasco", "addressCountry": "MX"}}], "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "13:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "16:00", "closes": "17:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "08:00", "closes": "13:30"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuál es la diferencia principal entre Tirzepatida y Retatrutida?", "acceptedAnswer": {"@type": "Answer", "text": "La Tirzepatida es un agonista dual (GIP + GLP-1) con amplia evidencia clínica y aprobación regulatoria. La Retatrutida es un agonista triple (GIP + GLP-1 + Glucagón) que suma un efecto adicional sobre el gasto energético."}}, {"@type": "Question", "name": "¿Cuál es más efectiva para bajar de peso?", "acceptedAnswer": {"@type": "Answer", "text": "Ambas son altamente efectivas dentro de un programa médico. La elección depende de tu perfil clínico, tolerancia y objetivos, y la define el médico tras tu valoración."}}, {"@type": "Question", "name": "¿Cuánto cuesta cada programa?", "acceptedAnswer": {"@type": "Answer", "text": "La consulta inicial cuesta $1,000 MXN. La dosis semanal de Tirzepatida es de $950 MXN y la de Retatrutida de $1,150 MXN. Las consultas subsecuentes e InBody de seguimiento son sin costo."}}, {"@type": "Question", "name": "¿Cómo se aplican?", "acceptedAnswer": {"@type": "Answer", "text": "Ambos son de aplicación subcutánea semanal, bajo supervisión médica en el consultorio."}}, {"@type": "Question", "name": "¿Todos los pacientes son candidatos?", "acceptedAnswer": {"@type": "Answer", "text": "No. La idoneidad se determina siempre mediante una valoración médica previa e individual."}}, {"@type": "Question", "name": "¿En dónde están sus consultorios?", "acceptedAnswer": {"@type": "Answer", "text": "En Ciudad del Carmen, Campeche (Calle 55 #93, Clínica Cesat) y en Villahermosa, Tabasco (Av. Paseo Tabasco, Plaza Ambientación, local 02)."}}, {"@type": "Question", "name": "¿Cómo se da el seguimiento?", "acceptedAnswer": {"@type": "Answer", "text": "Con consultas subsecuentes sin costo y mediciones periódicas con InBody, también sin costo. En cada subsecuente solo se cobra la dosis aplicada."}}, {"@type": "Question", "name": "¿Cómo agendo mi cita?", "acceptedAnswer": {"@type": "Answer", "text": "Por WhatsApp al +52 938 383 4002 o +52 938 128 2453, por teléfono o llenando el formulario de contacto."}}]}</script>
@@ -686,9 +695,9 @@ section[id]{scroll-margin-top:6.5rem}
 <section id="contacto" class="section">
   <div class="container ct-grid">
     <div class="reveal">
-      <span class="eyebrow">10 — Contacto</span>
-      <h2 class="display" style="margin-top:.75rem;font-size:clamp(2rem,4vw,3rem);color:var(--fg)">Solicita tu valoración</h2>
-      <p class="lead" style="margin-top:1.1rem">Déjanos tus datos y te contactamos por WhatsApp para agendar tu cita con el Dr. Fernando Terán y la Dra. Geraldine Cabrera.</p>
+      <span class="eyebrow">10 — Agenda tu cita</span>
+      <h2 class="display" style="margin-top:.75rem;font-size:clamp(2rem,4vw,3rem);color:var(--fg)">Agenda tu cita</h2>
+      <p class="lead" style="margin-top:1.1rem">Para agendar tu cita, contesta el cuestionario y avísanos por WhatsApp a los números <strong>938 128 2453</strong> (Dra. Geraldine) y <strong>938 383 4002</strong>. Aquí también tienes nuestros datos de contacto.</p>
       <div class="info">
         <div class="row">
           <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
@@ -728,21 +737,7 @@ section[id]{scroll-margin-top:6.5rem}
       <a class="btn btn-wa" style="margin-top:2.5rem" data-wa="Hola, quiero información sobre el programa médico de control de peso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Escribir directo por WhatsApp</a>
     </div>
     <div class="reveal">
-      <form class="form" id="contactForm" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-            <input type="hidden" name="form-name" value="contacto">
-            <p hidden><label>No llenar: <input name="bot-field"></label></p>
-        <div class="frow">
-          <div class="field"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" placeholder="Tu nombre" required /></div>
-          <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" inputmode="tel" placeholder="938 000 0000" required /></div>
-        </div>
-        <div class="frow">
-          <div class="field"><label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" placeholder="tu@correo.com" required /></div>
-          <div class="field"><label for="interes">Me interesa</label><input id="interes" name="interes" placeholder="Tirzepatida, Retatrutida o consulta" required /></div>
-        </div>
-        <div class="field"><label for="mensaje">Mensaje (opcional)</label><textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente lo que necesitas"></textarea></div>
-        <button type="submit" class="btn btn-hero btn-lg btn-block">Solicitar información ó Agendar una cita →</button>
-        <p class="finelabel">Al enviar aceptas nuestro <a href="#" class="priv-link" style="color:var(--primary)" onclick="openPriv(event)">Aviso de Privacidad</a> y que te contactemos por los medios proporcionados.</p>
-      </form>
+      <div class="quiz-note"><p><strong>Para agendar tu cita:</strong></p><ol class="quiz-steps"><li>Contesta el siguiente cuestionario.</li><li>Al terminar, notifícanos por WhatsApp a cualquiera de estos números.</li></ol><div class="quiz-wa"><a class="btn btn-wa" data-wa="Hola, ya contesté el cuestionario para agendar mi cita." data-phone="529381282453" target="_blank" rel="noopener" aria-label="WhatsApp 938 128 2453 Dra. Geraldine">WhatsApp 938 128 2453 · Dra. Geraldine</a><a class="btn btn-wa" data-wa="Hola, ya contesté el cuestionario para agendar mi cita." data-phone="529383834002" target="_blank" rel="noopener" aria-label="WhatsApp 938 383 4002">WhatsApp 938 383 4002</a></div></div><div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfW5S3eFvL3oI0YyBZiREbNauAt2El2wFIQp42myjzv4FZh9w/viewform?embedded=true" title="Cuestionario para agendar cita" loading="lazy">Cargando cuestionario…</iframe></div>
     </div>
   </div>
 </section>
@@ -786,7 +781,7 @@ section[id]{scroll-margin-top:6.5rem}
           <p>Agenda tu cita con cualquiera de nuestros médicos especializados en péptidos para control de peso y descubre si Tirzepatida o Retatrutida es la mejor opción para ti.</p>
         </div>
         <div class="btns">
-          <a class="btn btn-gold btn-block" data-wa="Hola, quiero agendar mi valoración para el programa médico de control de peso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Agendar cita por WhatsApp</a>
+          <a class="btn btn-gold btn-block" data-wa="Hola, quiero agendar mi valoración para el programa médico de control de peso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Contestar cuestionario para agendar</a>
           <a class="btn btn-light btn-block" data-wa="Hola, quiero agendar mi valoración." data-phone="529381282453" target="_blank" rel="noopener">WhatsApp +52 938 128 2453 →</a>
         </div>
       </div>
@@ -938,7 +933,7 @@ document.querySelectorAll(".qa button").forEach(function(b){
  });
 });
 // Contact form -> WhatsApp
-document.getElementById("contactForm").addEventListener("submit",function(e){
+var _cf=document.getElementById("contactForm"); if(_cf) _cf.addEventListener("submit",function(e){
  e.preventDefault();
  var f=e.target;
  if(!f.nombre.value.trim()||!f.telefono.value.trim()||!f.correo.value.trim()||!f.interes.value.trim()){f.reportValidity();return;}
